@@ -16,7 +16,7 @@ var changeState = function (state) {
             if (countDownNumber <= -1) {
                 changeState(3);
             }
-        }, 300);
+        }, 1000);
     } else if (state == 3) {
         var success = setTimeout(function () {
             var randomNumber = Math.round(Math.random() * 10);
