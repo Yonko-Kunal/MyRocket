@@ -96,7 +96,7 @@ a.button {
     margin-left: -71.5px;
     /* background-color: white; */
     background: url(img/rocket-state1.png) no-repeat center center;
-    background-size: 100%;
+    background-size: contain;
     transition: bottom 9000ms;
 }
 
