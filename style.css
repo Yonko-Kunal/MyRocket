@@ -1,5 +1,9 @@
+body {
+    font-family: Helvetica;
+}
+
 .left {
-    background-color: #fff0e1;
+    background-color: #e2d2be;
     position: fixed;
     width: 50%;
     height: 100%;
@@ -7,8 +11,34 @@
     left: 0;
 }
 
+.interface {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+}
+
+a.button {
+    text-decoration: none;
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 17px 40px;
+    border-radius: 10px;
+    border: solid black;
+    border-width: 2px;
+}
+
+.abortButton {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(199, 30, 30);
+    padding: 40px;
+    border-radius: 160px;
+}
+
 .right {
-    background-color: skyblue;
+    background-color: rgb(247, 247, 247);
     position: fixed;
     width: 50%;
     height: 100%;
@@ -17,7 +47,9 @@
 }
 
 .ground {
-    background-color: green;
+    /* background-color: green; */
+    background: url(img/ground.png) no-repeat 0 0;
+    background-size: contain;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -25,16 +57,62 @@
     height: 30px;
 }
 
+.nervious {
+    position: absolute;
+    bottom: 220px;
+    background-image: url(img/nervous.png);
+    left: 50%;
+    margin-left: -180px;
+    height: 100px;
+    width: 223px;
+    display: none;
+}
+
+.nervious.show {
+    display: block;
+}
+
+.cant-wait {
+    position: absolute;
+    bottom: 220px;
+    background-image: url(img/cant-wait.png);
+    left: 50%;
+    height: 65px;
+    width: 206px;
+    display: none;
+}
+
+.cant-wait.show {
+    display: block;
+}
+
 .rocket {
     position: absolute;
     left: 50%;
-    bottom: 30px;
-    width: 45px;
-    height: 150px;
+    bottom: -13px;
+    width: 143px;
+    height: 272px;
+    margin-left: -71.5px;
     /* background-color: white; */
-    background: url(pngkey.com-rocket-flame-png-1624816.png) no-repeat center center;
+    background: url(img/rocket-state1.png) no-repeat center center;
     background-size: 100%;
     transition: bottom 9000ms;
+}
+
+body.body-state2 .rocket {
+    background-image: url(img/rocket-state2.gif);
+}
+
+body.body-state3 .rocket,
+body.body-state4 .rocket {
+    background-image: url(img/rocket-state3.gif);
+}
+
+body.body-state5 .rocket {
+    background-image: url(img/boom.png);
+    height: 200px;
+    width: 209px;
+    margin-left: -104.5px;
 }
 
 body.body-state1 .rocket {

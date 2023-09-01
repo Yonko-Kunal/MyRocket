@@ -13,6 +13,17 @@ var changeState = function (state) {
             countDownNumber = countDownNumber - 1;
             document.getElementById('countDown').innerHTML = countDownNumber;
 
+            if (countDownNumber > 4 && countDownNumber <= 7) {
+                document.getElementById('nerviousId').className = 'nervious show'
+            } else {
+                document.getElementById('nerviousId').className = 'nervious'
+            }
+            if (countDownNumber > 1 && countDownNumber <= 4) {
+                document.getElementById('cant-waitId').className = 'cant-wait show'
+            } else {
+                document.getElementById('cant-waitId').className = 'cant-wait'
+            }
+
             if (countDownNumber <= -1) {
                 changeState(3);
             }
