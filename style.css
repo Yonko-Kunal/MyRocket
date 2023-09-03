@@ -122,7 +122,7 @@ body.body-state1 .rocket {
 
 body.body-state3 .rocket,
 body.body-state4 .rocket {
-    bottom: 1000px;
+    bottom: 2000px;
 }
 
 .state1,
@@ -151,4 +151,71 @@ body.body-state4 .state4 {
 
 body.body-state5 .state5 {
     display: block;
+}
+
+@media screen and (max-width: 800px) {
+
+    .left {
+        background-color: #e2d2be;
+        width: 100%;
+        height: 100px;
+        top: auto;
+        bottom: 0;
+    }
+
+    .right {
+        background-color: rgb(247, 247, 247);
+        width: 100%;
+        height: 100%;
+        top: auto;
+        bottom: 100px;
+    }
+
+    .interface {
+        display: flex;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        margin-top: -33px;
+        padding: 20px;
+        justify-content: space-between;
+        font-size: 11px;
+    }
+
+    .abortButton {
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        background-color: rgb(199, 30, 30);
+        padding: 30px;
+        border-radius: 140px;
+    }
+
+    .state1,
+    .state2,
+    .state3,
+    .state4,
+    .state5 {
+        display: none;
+    }
+
+    body.body-state1 .state1 {
+        display: block;
+    }
+
+    body.body-state2 .state2 {
+        display: block;
+    }
+
+    body.body-state3 .state3 {
+        display: block;
+    }
+
+    body.body-state4 .state4 {
+        display: block;
+    }
+
+    body.body-state5 .state5 {
+        display: block;
+    }
+
 }
